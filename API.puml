@@ -1,0 +1,24 @@
+@startuml
+start
+:Receive Request;
+:Authenticate;
+if (Authenticated?) then (Yes)
+    if (Request has Customer ID?) then (Yes)
+        if (Request has Account Number?) then (Yes)
+            if (Request has Description?) then (Yes)
+                :Query DB with Customer ID, Account Number, Description & Pagination;
+            else
+                :Query DB with Customer ID, Account Number & Pagination;
+            endif
+        else
+            :Query DB with Customer ID & Pagination;
+        endif
+    else
+        :Query DB with Pagination;
+    endif
+:Return Transactions;
+else (No)
+    :Return Authentication Error;
+endif
+stop
+@enduml
