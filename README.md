@@ -80,3 +80,8 @@ Class diagram
 Activity diagram
 ![image](https://github.com/user-attachments/assets/f1640239-cf04-48b5-a34a-10a6b2a706f7)
 
+## Future enchancement
+1. Consider using a token based authentication
+2. Add unit tests, integration tests
+3. Fixed Update API that is currently broken
+
