@@ -1,0 +1,32 @@
+@startuml
+
+class TransactionEntity {
+    - Long id
+    - String accountNumber
+    - String transactionAmount
+    - String description
+    - String transactionDate
+    - String transactionTime
+    - String customerId
+    - Long version
+    + Transaction()
+    + getId() : Long
+    + setId(Long id)
+    + getAccountNumber() : String
+    + setAccountNumber(String accountNumber)
+    + getTransactionAmount() : String
+    + setTransactionAmount(String trxAmount)
+    + getDescription() : String
+    + setDescription(String description)
+    + getTransactionDate() : String
+    + setTransactionDate(String transactionDate)
+    + getTransactionTime() : String
+    + setTransactionTime(String transactionTime)
+    + getCustomerId() : String
+    + setCustomerId(String customerId)
+    + getVersion() : Long
+    + setVersion(Long version)
+}
+
+
+@enduml
